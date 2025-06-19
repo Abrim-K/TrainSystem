@@ -1,22 +1,5 @@
 #include "Train.h"
 
-void LoadFromFile(vector <Train> &trains) {
-    string file, number, station, month, day, hour, minute;
-    cout << "Введите имя файла: ";
-    cin >> file;
-    ifstream in(file);
-    if (in.is_open()) {
-        while (in >> number >> station >> month >> day >> hour >> minute) {
-            Train train(number, station, month, day, hour, minute);
-            trains.push_back(train);
-        }
-        cout << "Данные получены успешно" << endl;
-    }
-    else {
-        cout << "Ошибка" << endl;
-    }
-}
-
 
 int main() {
     system("chcp 1251");

@@ -26,7 +26,6 @@ public:
 	string get_time() {
 		return month + '.' + day + ' ' + hour + ':' + minute;
 	}
-	//~Time();
 };
 
 
@@ -52,23 +51,25 @@ public:
 		cout << "Поезд номер " << number << "\nСтанция назначения: " << station << endl;
 		cout << "Дата отправления (ММ.ДД): " << month << '.' << day << "\nВремя: " << hour << ':' << minute << endl;
 	}
-	//~Train();
 };
 
 
-string rework(string p_time);
+string rework(string p_time); //дополняет формат чисел
 
 
-void InputTrain(vector <Train>& p_trains);
+void InputTrain(vector <Train>& p_trains);  //Ввод поездов с консоли
 
 
-void OutputAllTrains(vector <Train> p_trains);
+void OutputAllTrains(vector <Train> p_trains); //Показать все поезда
 
 
-void SearchByNumber(vector <Train> p_trains);
+void SearchByNumber(vector <Train> p_trains); //Поиск поезда по номеру
 
 
-void SearchByStation(vector <Train> p_trains);
+void SearchByStation(vector <Train> p_trains); //Поиск поезда по станции назначения
 
 
-void divide();
+void LoadFromFile(vector <Train>& trains); //Ввод поездов из файла
+
+
+void divide(); //визуал
